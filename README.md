@@ -2,6 +2,8 @@
 
 The official marketing and documentation website for the ChatGPT++ browser extension.
 
+Live site: [chatgpt-enhanced.netlify.app](https://chatgpt-enhanced.netlify.app)
+
 ---
 
 ## Overview
@@ -84,16 +86,14 @@ npm run start
 
 ## Deployment
 
-This is a standard Next.js application and can be deployed to any platform that supports Node.js.
+This project is deployed on [Netlify](https://chatgpt-enhanced.netlify.app).
 
-Build the application for production:
+Netlify detects Next.js automatically. To deploy your own instance:
 
-```bash
-npm run build
-npm run start
-```
-
-For static export or container-based deployments, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+1. Import the repository at [app.netlify.com](https://app.netlify.com).
+2. Set the **Base directory** to `app`.
+3. Netlify will infer the build command (`next build`) and publish directory automatically.
+4. Push to the `main` branch to trigger automatic production deployments.
 
 ---
 
