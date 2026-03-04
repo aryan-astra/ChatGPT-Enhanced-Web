@@ -19,7 +19,6 @@ The site is structured around a strict black-and-white visual identity, with no 
 - **Styling:** Tailwind CSS
 - **Component Library:** shadcn/ui
 - **Animations:** Framer Motion
-- **Deployment:** Vercel
 
 ---
 
@@ -85,22 +84,16 @@ npm run start
 
 ## Deployment
 
-This project is deployed via [Vercel](https://vercel.com). Vercel detects the Next.js framework automatically and applies the correct build configuration without additional setup.
+This is a standard Next.js application and can be deployed to any platform that supports Node.js.
 
-### Deploy via Vercel CLI
+Build the application for production:
 
 ```bash
-npm install -g vercel
-vercel
+npm run build
+npm run start
 ```
 
-### Deploy via Vercel Dashboard
-
-1. Import the repository at [vercel.com/new](https://vercel.com/new).
-2. Vercel will detect Next.js automatically. No additional configuration is required.
-3. Push to the `main` branch to trigger automatic production deployments.
-
-Environment variables, if needed, are managed through the Vercel project dashboard under **Settings > Environment Variables**.
+For static export or container-based deployments, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
 ---
 
