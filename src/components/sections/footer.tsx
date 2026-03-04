@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1100px] px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
           <span className="text-sm font-semibold tracking-[-0.3px] text-white">
-            ChatGPT++ v3.4.3
+            ChatGPT++ v3.5.0
           </span>
           <nav className="flex gap-8" aria-label="Footer navigation">
             <Link

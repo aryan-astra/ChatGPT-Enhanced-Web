@@ -65,8 +65,8 @@ const features = [
   },
   {
     name: "Context % Bar",
-    description: "Live token-usage progress bar in the chat header.",
-    how: "Reads token counts from SSE stream metadata (prompt_tokens, completion_tokens) and falls back to fetching the full conversation JSON. Throttled to 1 update per 500ms during streaming.",
+    description: "Live token-usage progress bar in the chat header, with blocked-feature detection and extended system data.",
+    how: "Reads token counts from SSE stream metadata and falls back to fetching full conversation JSON. Throttled to 1 update/500ms during streaming. Detects blocked_features from /conversation/init (distinct from quota limits). Extended system data (Memory count, generated image count, Custom Instructions status) fetched in parallel from three endpoints and shown in a SYSTEM section inside the context popover. Debounced to once per 5 minutes.",
     storage: "No data stored.",
   },
   {
@@ -152,6 +152,15 @@ const faqs = [
 ];
 
 const changelog = [
+  {
+    version: "3.5.0",
+    changes: [
+      "Blocked feature detection — parses blocked_features from /conversation/init, distinct from quota limits",
+      "Extended system data in Context Intelligence popover — Memory count, generated image count, Custom Instructions",
+      "New API endpoints: /memories, /images/bootstrap, /user_system_messages",
+      "Pill color fix — blocked status no longer affects color; red = 0 remaining, orange = ≤2",
+    ],
+  },
   {
     version: "3.4.3",
     changes: [
@@ -260,7 +269,7 @@ export default function DocsPage() {
                   />
                 </div>
                 <p className="text-xs text-[#666666] mt-3 text-center">
-                  Extension popup — v3.4.3
+                  Extension popup — v3.5.0
                 </p>
               </div>
             </div>

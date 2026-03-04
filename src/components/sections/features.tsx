@@ -60,7 +60,7 @@ const features: Feature[] = [
   {
     title: "Context Intelligence Bar",
     description:
-      "Live token-usage progress bar in the chat header. Shows prompt and completion token counts, file attachment tracking, and a detailed popover with full context stats.",
+      "Live token-usage progress bar in the chat header. Shows prompt and completion token counts, file attachment tracking, and blocked-feature detection. The popover now includes a System section with Memory count, generated image count, and Custom Instructions status.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <circle cx="12" cy="12" r="10" />
